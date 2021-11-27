@@ -9,8 +9,7 @@ using namespace std;
 
 void solve() {
 	int n, r = 1, maxDist = 1; cin >> n;
-	vi b(n), ans(n+1, -1), dist(n+1, 0), p(n);
-	vi distRoot(n+1, 0);
+	vi b(n), ans(n+1, -1), distRoot(n+1, 0), p(n);
 	for(int i = 0; i < n; i++) {
 		cin >> b[i];
 		if(b[i] == i+1) r = i+1;
@@ -24,7 +23,6 @@ void solve() {
 		}
 		ans[p[i]] = maxDist-distRoot[b[p[i]-1]]+1;
 		distRoot[p[i]] = distRoot[b[p[i]-1]]+ans[p[i]];
-		dist[b[p[i]-1]]++;
 		maxDist++;
 	}
 	for(int i = 1; i <= n; i++) {
