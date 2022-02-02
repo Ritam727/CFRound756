@@ -2,9 +2,6 @@
 typedef long long ll;
 typedef unsigned long long ull;
 #define tests int t; cin >> t; while(t--)
-#define vll vector<ll>
-#define vi vector<int>
-#define pb push_back
 using namespace std;
 
 void solve() {
